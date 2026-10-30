@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CopaBot · Especialista em Copa do Mundo</title>
+  <meta name="description" content="Converse com o CopaBot sobre a história, as seleções, os jogadores e os recordes da Copa do Mundo de Futebol.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Cabeçalho: bola em CSS, título e faixa dourada de anos -->
+    <header class="topbar">
+      <div class="ball" aria-hidden="true"></div>
+      <div class="titles">
+        <h1>Copa<span>Bot</span></h1>
+        <p>Seu especialista em Copa do Mundo de Futebol</p>
+      </div>
+    </header>
+    <div class="ribbon" aria-hidden="true">
+      <span>1930</span><span>1950</span><span>1970</span><span>1994</span><span>2002</span><span>2014</span><span>2022</span><span>2026</span>
+    </div>
+
+    <!-- Área de mensagens com rolagem -->
+    <main id="messages" class="messages" role="log" aria-live="polite" aria-label="Conversa"></main>
+
+    <!-- Campo de entrada -->
+    <form id="chat-form" class="composer" autocomplete="off">
+      <label for="input" class="sr-only">Sua pergunta sobre a Copa do Mundo</label>
+      <textarea id="input" rows="1" maxlength="500" placeholder="Pergunte sobre a Copa do Mundo…" enterkeyhint="send"></textarea>
+      <button id="send" type="submit" aria-label="Enviar mensagem">
+        <span>Apitar</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 20l18-8L3 4v6l11 2-11 2z" fill="currentColor"/></svg>
+      </button>
+    </form>
+    <div class="counter" id="counter" aria-hidden="true">0/500</div>
+
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
